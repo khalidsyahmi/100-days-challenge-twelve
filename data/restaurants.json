@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Shrimps battle arena",
+    "address": "Back alley of Atlantis ",
+    "cuisine": "Golden fried shrimp balls",
+    "website": "https://shrimpparadise.com",
+    "description": "I like deep fried cuisine. I am sure you would like it too!"
+  },
+  {
+    "name": "Squid Shack",
+    "address": "Beaches of the dying light",
+    "cuisine": "Takoyaki",
+    "website": "https://takobell.com",
+    "description": "Great dish from the unknown deity"
+  }
+]
