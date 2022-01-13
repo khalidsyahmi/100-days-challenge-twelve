@@ -6,7 +6,7 @@ const express = require("express");
 //to use express function
 const app = express();
 
-//ejs template package
+//ejs template engine
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
@@ -24,7 +24,14 @@ app.get("/", function (req, res) {
 });
 
 app.get("/restaurants", function (req, res) {
-  res.render("restaurants");
+  const filePath = path.join(__dirname, "data", "restaurants.json");
+  const fileData = fs.readFileSync(filePath);
+  const storedRestaurants = JSON.parse(fileData);
+
+  res.render("restaurants", {
+    numOfRestaurants: storedRestaurants.length,
+    restaurants: storedRestaurants,
+  }); // objects // javascript // array from read json file
 });
 
 app.get("/recommend", function (req, res) {
